@@ -6,3 +6,7 @@ body {
 	color: red;
 	padding-left: 50px;
 }
+
+#attackBtn {
+	background-color: red;
+}
