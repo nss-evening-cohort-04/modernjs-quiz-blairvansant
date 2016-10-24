@@ -6,33 +6,44 @@
 	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="quiz.css">
 </head>
-<h1>Robot Battledrome</h1>
-<h6 class="subHead">Two robots enter, one robot leaves.</h6>
 <body>
-	<div class="form-group">
-  	<label for="usr">Robot One:</label>
-  	<input type="text" class="form-control" id="usr">
-	</div>
-	<button type="button" class="btn btn-primary center-block">Select Robot Type</button><br>
-	<div class="form-group">
-  	<label for="usr">Robot Two:</label>
-  	<input type="text" class="form-control" id="usr">
-	</div>
-	<button type="button" class="btn btn-primary center-block">Select Robot Type</button><br>
-	<br>
-	<button id="attackBtn" type="button" class="btn btn-primary center-block">Attack!</button>
+	<h1>Robot Battledrome</h1>
+		<h6 class="subHead">Two robots enter, one robot leaves.</h6>
+			<div class="container">
+				<div class="row">
+					<div class="input-group input-group-lg col-xs-6 col-sm-4" id="robot-one">
+			  	<input type="text" id="name-one" class="form-control" placeholder="Username" aria-describedby="sizing-addon1">
+			  	<label>Choose Your Robot</label><br>
+			  		<select id="select" class="robotSelector">
+			  			<option value="aerialDrone">Aerial Drone</option>
+			  			<option value="aerialBipedal">Aerial Bipedal</option>
+			  			<option value="aerialATV">Aerial ATV</option>
+			  			<option value="groundDrone">Ground Drone</option>
+			  			<option value="groundBipedal">Ground Bipedal</option>
+			  			<option value="groundATV">Ground ATV</option>
+			  		</select>
+					</div>
+					<div class="input-group input-group-lg col-xs-6 col-sm-4" id="robot-two"><br><br>
+			  	<input type="text" id="name-two" class="form-control" placeholder="Username" aria-describedby="sizing-addon1">
+			  	<label>Choose Your Robot</label><br>
+			  		<select id="select" class="robotSelector">
+			  		  <option value="aerialDrone">Aerial Drone</option>
+			  			<option value="aerialBipedal">Aerial Bipedal</option>
+			  			<option value="aerialATV">Aerial ATV</option>
+			  			<option value="groundDrone">Ground Drone</option>
+			  			<option value="groundBipedal">Ground Bipedal</option>
+			  			<option value="groundATV">Ground ATV</option>
+			  		</select>
+					</div>
+				</div>
+			</div>
 
 
 
 
-
-
-
-
-
-
-	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="lib/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="javascripts/quiz.js"></script>
 </body>
 </html>
