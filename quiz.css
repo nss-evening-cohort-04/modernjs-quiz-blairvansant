@@ -1,12 +1,9 @@
-body {
-	background-color: khaki;
+h1 {
+	color: blue;
+	padding-left: 450px;
 }
 
-.subHead {
-	color: red;
-	padding-left: 50px;
-}
-
-#attackBtn {
-	background-color: red;
+h6 {
+	color: teal;
+	padding-left: 450px;	
 }
