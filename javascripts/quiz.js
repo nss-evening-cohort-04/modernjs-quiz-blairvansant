@@ -1,31 +1,130 @@
-console.log ("two robots enter, one robot leaves");
-// 
+
+"use strict";
+
+//1. A base Robot function
+
+function Robot () {
+  this.attackType = null;
+  this.damage = Math.floor(Math.random() * 10);
+  this.health = 0;
+  this.weapon = null;
+  console.log(this);
+}
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+//4. Define at least 2 specific robot model functions for each type
+//5. Give each robot model a different range of health
+
+function Aerial () {
+  this.attackType = "Aerial";
+  this.health = getRandomInt(50, 80);
+  this.damage = 20;
+
+}
+Aerial.prototype = new Robot();
+
+function Ground () {
+  this.attackType = "Ground";
+  this.health = getRandomInt(60, 120);
+  this.damage = 20;
+}
+Ground.prototype = new Robot();
+  
+//2. Define three robot type functions (e.g. Drone, Bipedal, ATV)
+//3. Aerial Robots: Drone, Bipedal, ATV
+//6. Give each robot model a different range of damage they do using the same technique
+
+//---AERIAL GROUP---
+
+function AerialDrone () {
+  this.type = "Drone";
+  this.damage += 5;
+}
+AerialDrone.prototype = new Aerial();
+
+function AerialBipedal () {
+  this.type = "Bipedal";
+	this.damage += 10;
+}
+AerialBipedal.prototype = new Aerial();
+
+function AerialATV () {
+  this.type = "ATV";
+	this.damage += 15;
+}
+AerialATV.prototype = new Aerial();
+
+//2. Define three robot type functions (e.g. Drone, Bipedal, ATV)
+//3. Ground Robots: Drone, Bipedal, ATV
+//6. Give each robot model a different range of damage they do using the same technique
+
+//---GROUND GROUP---
+
+function GroundDrone () {
+  this.type = "Drone";
+	this.damage += 5;
+}
+
+GroundDrone.prototype = new Ground();
+
+function GroundBipedal () {
+  this.type = "Bipedal";
+	this.damage += 10;
+}
+
+GroundBipedal.prototype = new Ground();
+
+function GroundATV () {
+  this.type = "ATV";
+	this.damage += 15;
+}
+
+GroundATV.prototype = new Ground();
+
+let player1 = new Aerial();
+let player2 = new Ground();{
+console.log("player one health", player1.health);
+console.log("player two health", player2.health);
+  
+}
 
 
 
 
 
-// Code/Tools Requirements
 
-// Use ES6 language features wherever you can. At a minimum, you should be using let, const, fat arrows, property shorthand, method properties, and string templates.
-// Have a Grunt task running at all times to validate your JavaScript. We will be validating your project and we should see 0 errors.
 
-// You must use jQuery for interacting with the DOM.
 
-// Logical Requirements
 
-// You'll be building robots to battle each other.
 
-// A base Robot function.
-// Define three robot type functions (e.g. Drone, Bipedal, ATV).
-// Each type must have a unique property, for example, if it is aerial or ground based.
-// Define at least 2 specific robot model functions for each type.
-// Give each robot model a different range of health. For example, one model can have health range of 50-80, and another one will have a range of 60-120. To accomplish this, read about the Math.random() function in JavaScript.
-// Give each robot model a different range of damage they do using the same technique.
-// Functional Requirements
 
-// When your user interface first loads, provide 2 text inputs to name the two robots that will do battle.
-// You must also provide a select element underneath each text input so that the user can select one of the 6 robot models you defined.
-// Provide a Attack! button that, when clicked, simply applies the damage output of each robot against the other one.
-// Once either robot's health is <0 display a message that the battle is over, and which one won. For example...
-// The Viper Drone defeated the Behemoth ATV with its flamethrower.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,9 +1,32 @@
+body {
+	background: #9AC0CD;
+}
+
 h1 {
-	color: blue;
+	color: green;
 	padding-left: 450px;
 }
 
 h6 {
-	color: teal;
+	color: green;
 	padding-left: 450px;	
 }
+
+#robot-one {
+	display: inline-block;
+	margin-left: -170px;
+}
+
+#robot-two {
+	display: inline-block;
+}
+
+label {
+	margin-left: 100px;
+}
+
+#select {
+	margin-left: 100px;
+}
+
+

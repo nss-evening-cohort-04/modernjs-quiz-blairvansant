@@ -11,10 +11,11 @@
 		<div class="wrapper col-md-offset-4 col-md-4">
 			<div class="container">
 				<div class="row">
-					<div class="input-group input-group-lg col-xs-6 col-sm-4" id="robot-one">
-			  	<input type="text" id="name-one" class="form-control" placeholder="Username" aria-describedby="sizing-addon1">
+					<div class="input-group input-group-sm" id="robot-one">
+			  	<input type="text" id="name-one" class="form-control" placeholder="Player one" aria-describedby="sizing-addon1">
+
 			  	<label>Choose Your Robot</label><br>
-			  		<select id="select" class="robotSelector">
+			  		<select id="selectOne" class="robotSelectorOne">
 			  			<option value="aerialDrone">Aerial Drone</option>
 			  			<option value="aerialBipedal">Aerial Bipedal</option>
 			  			<option value="aerialATV">Aerial ATV</option>
@@ -23,10 +24,10 @@
 			  			<option value="groundATV">Ground ATV</option>
 			  		</select>
 					</div>
-					<div class="input-group input-group-lg col-xs-6 col-sm-4" id="robot-two"><br><br>
-			  	<input type="text" id="name-two" class="form-control" placeholder="Username" aria-describedby="sizing-addon1">
+					<div class="input-group input-group-sm" id="robot-two"><br>
+			  	<input type="text" id="name-two" class="form-control" placeholder="Player Two" aria-describedby="sizing-addon1">
 			  	<label>Choose Your Robot</label><br>
-			  		<select id="select" class="robotSelector">
+			  		<select id="selectTwo" class="robotSelectorTwo">
 			  		  <option value="aerialDrone">Aerial Drone</option>
 			  			<option value="aerialBipedal">Aerial Bipedal</option>
 			  			<option value="aerialATV">Aerial ATV</option>
@@ -34,13 +35,18 @@
 			  			<option value="groundBipedal">Ground Bipedal</option>
 			  			<option value="groundATV">Ground ATV</option>
 			  		</select>
-					</div><!--row-->
-				</div><!--container -->
-			</div><!--wrapper --><br>
-		<button type="button" class="btn btn-danger col-md-offset-4 col-md-4" id="attackBtn">ATTACK!!!</button>
+					</div>
+				</div><!--row-->
+			</div><!--container --><br> 
+			</div><!--wrapper -->
+
+		<button type="button" class="btn btn-warning col-md-offset-4 col-md-4" id="attackBtn">ATTACK!!!</button>
+
+		<div class="output"></div>
+
 	<script src="lib/bower_components/jquery/dist/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-	<script type="text/javascript" src="javascripts/main.js"></script>
+	<script type="text/javascript" src="javascripts/quiz.js"></script>
 </body>
 </html>
