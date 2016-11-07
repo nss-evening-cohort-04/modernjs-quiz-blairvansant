@@ -2,51 +2,69 @@
 <html>
 <head>
 	<title>MJD Quiz</title>
-	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-     <link rel="stylesheet" type="text/css" href="quiz.css">
- </head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Orbitron:700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="quiz.css">
+</head>
 <body>
 	<h1>Robot Battledrome</h1>
 		<h6 class="subHead">Two robots enter, one robot leaves.</h6>
-		<div class="wrapper col-md-offset-4 col-md-4">
-			<div class="container">
-				<div class="row">
-					<div class="input-group input-group-sm" id="robot-one">
-			  	<input type="text" id="name-one" class="form-control" placeholder="Player one" aria-describedby="sizing-addon1">
+	<div class="robotWrapper">
+		<div class="row">
+			<div class="input-group input-group-lg col-xs-6 col-sm-4" id="robot-one">
+			  <span class="input-group-addon" id="sizing-addon1">Robot One</span>
+			  <input type="text" id="name1" class="form-control" placeholder="Enter Name" aria-describedby="sizing-addon1">
+			  <label>Choose Your Robot</label>
 
-			  	<label>Choose Your Robot</label><br>
-			  		<select id="selectOne" class="robotSelectorOne">
-			  			<option value="aerialDrone">Aerial Drone</option>
-			  			<option value="aerialBipedal">Aerial Bipedal</option>
-			  			<option value="aerialATV">Aerial ATV</option>
-			  			<option value="groundDrone">Ground Drone</option>
-			  			<option value="groundBipedal">Ground Bipedal</option>
-			  			<option value="groundATV">Ground ATV</option>
-			  		</select>
-					</div>
-					<div class="input-group input-group-sm" id="robot-two"><br>
-			  	<input type="text" id="name-two" class="form-control" placeholder="Player Two" aria-describedby="sizing-addon1">
-			  	<label>Choose Your Robot</label><br>
-			  		<select id="selectTwo" class="robotSelectorTwo">
-			  		  <option value="aerialDrone">Aerial Drone</option>
-			  			<option value="aerialBipedal">Aerial Bipedal</option>
-			  			<option value="aerialATV">Aerial ATV</option>
-			  			<option value="groundDrone">Ground Drone</option>
-			  			<option value="groundBipedal">Ground Bipedal</option>
-			  			<option value="groundATV">Ground ATV</option>
-			  		</select>
-					</div>
-				</div><!--row-->
-			</div><!--container --><br> 
-			</div><!--wrapper -->
+			  <select id="selectOne" class="robotSelectorOne">
+			  	<option value="AerialDrone">Aerial Drone</option>
+			  	<option value="AerialBipedal">Aerial Bipedal</option>
+			  	<option value="AerialATV">Aerial ATV</option>
+			  	<option value="GroundDrone">Ground Drone</option>
+			  	<option value="GroundBipedal">Ground Bipedal</option>
+			  	<option value="GroundATV">Ground ATV</option>
+			  </select>
+			</div>
+			
+			<div class="input-group input-group-lg col-xs-6 col-sm-4" id="robot-two">
+			  <span class="input-group-addon" id="sizing-addon1">Robot Two</span>
+			  <input type="text" id="name2" class="form-control" placeholder="Enter Name" aria-describedby="sizing-addon1">
+			  <label>Choose Your Robot</label>
+			  
+			  <select id="selectTwo" class="robotSelectorTwo">
+			  	<option value="AerialDrone" id="AerialDrone">Aerial Drone</option>
+			  	<option value="AerialBipedal">Aerial Bipedal</option>
+			  	<option value="AerialATV">Aerial ATV</option>
+			  	<option value="GroundDrone">Ground Drone</option>
+			  	<option value="GroundBipedal">Ground Bipedal</option>
+			  	<option value="GroundATV">Ground ATV</option>
+			  </select>
+			</div>
+			<div id="submitResult">
+				<button type="submit" id="submit" class="btn btn-default btn btn-lg">Submit</button>
+			</div>	
+		</div>	
+	</div>
+	<div class="output" id="output"><button id="attack" class="btn btn-default btn btn-lg">ATTACK!!!</button></div>
 
-		<button type="button" class="btn btn-warning col-md-offset-4 col-md-4" id="attackBtn">ATTACK!!!</button>
-
-		<div class="output"></div>
-
+	
 	<script src="lib/bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	<script type="text/javascript" src="javascripts/quiz.js"></script>
+	<script type="text/javascript" src="javascripts/battle.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+ 
