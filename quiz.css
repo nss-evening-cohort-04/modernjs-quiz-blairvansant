@@ -40,11 +40,12 @@ h6 {
 }
 
 #attack {
-	margin-left:  375px;
+	margin: 15px 0 15px  5px;
 }
 
-#submit {
-	margin: 15px 0;
+#submitButton {
+	margin: 15px 0 15px  5px;
+
 }
 
 #output {
@@ -52,8 +53,10 @@ h6 {
 	background-color: #CD5555; 
 	border-radius: 8px;
 	margin: 0 auto;
-	width: 70%; 
+	width: 48%; 
 	padding: 10px;
+	text-align: center;
+
 }
 
 #submitResult {

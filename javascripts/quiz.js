@@ -1,7 +1,5 @@
 "use strict";
 
-//1. A base Robot function
-
 function Robot () {
   this.attackType = null;
   this.damage = Math.floor(Math.random() * 10);
@@ -18,7 +16,7 @@ function getRandom(min, max) {
 function Aerial () {
   this.attackType = "Aerial";
   this.health = getRandom(50, 80);
-  this.damage = 20;
+  this.damage = 18;
 
 }
 Aerial.prototype = new Robot();
@@ -26,54 +24,49 @@ Aerial.prototype = new Robot();
 function Ground () {
   this.attackType = "Ground";
   this.health = getRandom(60, 120);
-  this.damage = 20;
+  this.damage = 17;
 }
 Ground.prototype = new Robot();
   
 function AerialDrone () {
   this.type = "Drone";
-  this.damage += 5;
+  this.damage += 7;
 }
 AerialDrone.prototype = new Aerial();
 
 function AerialBipedal () {
   this.type = "Bipedal";
-	this.damage += 10;
+	this.damage += 12;
 }
 AerialBipedal.prototype = new Aerial();
 
 function AerialATV () {
   this.type = "ATV";
-	this.damage += 15;
+	this.damage += 16;
 }
 AerialATV.prototype = new Aerial();
 
 function GroundDrone () {
   this.type = "Drone";
-	this.damage += 5;
+	this.damage += 9;
 }
 
 GroundDrone.prototype = new Ground();
 
 function GroundBipedal () {
   this.type = "Bipedal";
-	this.damage += 10;
+	this.damage += 11;
 }
 
 GroundBipedal.prototype = new Ground();
 
 function GroundATV () {
   this.type = "ATV";
-	this.damage += 15;
+	this.damage += 18;
 }
 
 GroundATV.prototype = new Ground();
 
-let player1 = new Aerial();
-let player2 = new Ground();{
-console.log("player one", player1);
-console.log("player two", player2);
-}
 
 // button.click(); {
 //   if ("drone") {
