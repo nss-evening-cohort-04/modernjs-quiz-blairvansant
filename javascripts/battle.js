@@ -1,3 +1,5 @@
+"use strict";
+
 $(document).ready(function(){
 
 let player1 = new Aerial();
@@ -28,7 +30,7 @@ function newPlayer () {
   player2.robot = new window[select2.val()]();
   console.log('robot one', player1);
   console.log('robot two', player2);
-let output = `<p>${player1.name} is the ${player1.robotType} robot and starts with ${player2.health} health and ${player2.damage} damage.</p>`;
+let output = `<p>${player1.name} is the ${player1.robotType} robot and starts with ${player1.health} health and ${player1.damage} damage.</p>`;
   output += `<p>${player2.name} is the ${player2.robotType} robot and starts with ${player2.health} health and ${player2.damage} damage.</p>`;
   showSelection.append(output);
 }
@@ -37,10 +39,9 @@ let output = `<p>${player1.name} is the ${player1.robotType} robot and starts wi
 submitBtn.on("click", function(){
      console.log("submit", submitBtn);
   newPlayer();
-})
+});
     
 function attack () {
-  console.log("name1", name1);
   player1.health -= player2.damage;
   player2.health -= player1.damage;
 
@@ -49,7 +50,7 @@ if (player1.health > 0 && player2.health > 0){
     output += `<p>${player2.name}, the ${player2.robotType} robot, now has ${player2.health} health.</p>`;
     outputDiv.append(output);
 } else if (player2.health < 0){
-       let output = `<p>${player1.name} won the battle and defeated ${name2}: ${player2.name}.`;
+       let output = `<p>${player1.name} won the battle and defeated ${player2.name}.`;
        outputDiv.append(output);
      } else {
        let output = `<p>${player2.name} won the battle and defeated ${player1.name}.`;
@@ -58,7 +59,6 @@ if (player1.health > 0 && player2.health > 0){
 }
 
 attackBtn.on("click", function(){
-  console.log("attack", attackBtn)
   attack();
   });
 
